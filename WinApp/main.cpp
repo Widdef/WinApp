@@ -1,5 +1,4 @@
 #include <windows.h>
-#include "definedValues.h"
 #include "callBack.h"
 #include "upperMenu.h"
 
@@ -7,7 +6,7 @@
 int WINAPI WinMain(HINSTANCE currentInstance, HINSTANCE previousInstance, PSTR cmdLine, INT cmdCount)
 {
 	// REJESTROWANIE KLASY
-	LPCWSTR CLASS_NAME = L"myWin32WindowClass";
+	LPCWSTR CLASS_NAME = L"MainWindowClass";
 	WNDCLASSEXW wc{};
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.hInstance = currentInstance;
@@ -19,8 +18,10 @@ int WINAPI WinMain(HINSTANCE currentInstance, HINSTANCE previousInstance, PSTR c
 		return -1;
 
 	// TWORZENIE OKNA
-	CreateWindowExW(WS_EX_ACCEPTFILES, CLASS_NAME, L"Okno",
-		WS_OVERLAPPEDWINDOW | WS_VISIBLE,    
+	LPCWSTR gameName = GAME_NAME.c_str();
+
+	CreateWindowExW(WS_EX_ACCEPTFILES, CLASS_NAME, gameName, //Show only 1st char
+		WS_OVERLAPPED | WS_SYSMENU | WS_VISIBLE,
 		CW_USEDEFAULT, CW_USEDEFAULT,  
 		800, 600,                      
 		nullptr, nullptr, nullptr, nullptr);

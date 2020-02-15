@@ -1,5 +1,8 @@
 #include "callBack.h"
 #include "upperMenu.h"
+#include "gameWindow.h"
+#include "callbackThreads.h"
+
 
 LRESULT CALLBACK WindowProcessMessages(HWND hWnd, UINT msg, WPARAM param, LPARAM lparam)
 {
@@ -11,6 +14,7 @@ LRESULT CALLBACK WindowProcessMessages(HWND hWnd, UINT msg, WPARAM param, LPARAM
 		case MENU_FILE_SAVE:
 			break;
 		case MENU_FILE_MENU:
+			MessageBox(NULL, "HELLO WORLD", "Moje okno", MB_OK);
 			break;
 		case MENU_FILE_EXIT:
 			DestroyWindow(hWnd);
@@ -18,7 +22,8 @@ LRESULT CALLBACK WindowProcessMessages(HWND hWnd, UINT msg, WPARAM param, LPARAM
 		}
 		break;
 	case WM_CREATE:
-		AddMenus(hWnd);
+		menuThread = new std::thread(AddMenus,hWnd);
+		windowThread = new std::thread(GameWindow,hWnd,gameScreenThread);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
