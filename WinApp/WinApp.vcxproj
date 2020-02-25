@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{AF4AC738-78FA-4BCA-970A-843D28CDA3E6}</ProjectGuid>
     <RootNamespace>WinApp</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -126,16 +126,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="callBack.cpp" />
+    <ClCompile Include="characterClass.cpp" />
     <ClCompile Include="gameWindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="playerClass.cpp" />
     <ClCompile Include="threadListClass.cpp" />
     <ClCompile Include="upperMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="callBack.h" />
     <ClInclude Include="callbackThreads.h" />
+    <ClInclude Include="characterClass.h" />
     <ClInclude Include="definedValues.h" />
     <ClInclude Include="gameWindow.h" />
+    <ClInclude Include="playerClass.h" />
     <ClInclude Include="threadListClass.h" />
     <ClInclude Include="upperMenu.h" />
   </ItemGroup>

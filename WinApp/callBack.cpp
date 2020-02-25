@@ -22,8 +22,9 @@ LRESULT CALLBACK WindowProcessMessages(HWND hWnd, UINT msg, WPARAM param, LPARAM
 		}
 		break;
 	case WM_CREATE:
-		menuThread = new std::thread(AddMenus,hWnd);
-		windowThread = new std::thread(GameWindow,hWnd,gameScreenThread);
+		/*menuThread = new std::thread(AddMenus,hWnd);
+		windowThread = new std::thread(GameWindow,hWnd,gameScreenThread);*/
+		GameWindow(hWnd);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);

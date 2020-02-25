@@ -4,4 +4,4 @@
 #include <thread>
 #include "definedValues.h"
 
-void GameWindow(HWND, std::atomic<bool>&);
+void GameWindow(HWND);

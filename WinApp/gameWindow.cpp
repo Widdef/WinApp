@@ -1,7 +1,7 @@
 #include "gameWindow.h"
 
 
-void GameWindow(HWND hWnd, bool& runningMenu)
+void GameWindow(HWND hWnd)
 {
 	LPCWSTR gameName = GAME_NAME.c_str();
 	RECT rc;
@@ -16,8 +16,5 @@ void GameWindow(HWND hWnd, bool& runningMenu)
 		200,100,
 		hWnd,NULL,NULL,NULL);
 	const auto waitDuration = std::chrono::milliseconds(WAIT_TIME);
-	while (runningMenu)
-	{
-		std::this_thread::sleep_for(waitDuration);
-	}
+	
 }

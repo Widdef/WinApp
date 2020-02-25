@@ -30,6 +30,12 @@
     <ClCompile Include="threadListClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="playerClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="characterClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="definedValues.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="threadListClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="characterClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
